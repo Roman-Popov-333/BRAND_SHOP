@@ -1,0 +1,165 @@
+.advantages-wrap {
+    min-height: 341px;
+    background-color: #222224;
+    display: flex;
+    justify-content: space-between;
+}
+.advantages-content {
+    margin-top: 104px;
+    margin-bottom: 104px;
+    width: 360px;
+    height: 134px;
+    box-sizing: border-box;
+    @include center-item;
+    flex-direction: column;
+}
+.advantages-head {
+    padding-top: 28px;
+    font-size: 20px;
+    line-height: 24px;
+    color: #FBFBFB;
+}
+.advantages-text {
+    padding-top: 16px;
+    font-size: 14px;
+    line-height: 17px;
+    text-align: center;
+    color: #FBFBFB;
+}
+
+/* ОБРАТНАЯ СВЯЗЬ */
+.feedback {
+    min-height: 448px;
+    width: 100%;
+    background-image: url(../img/feed-back.png);
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+    display: flex;
+    justify-content: space-between;
+}
+.feedback-left {
+    width: 360px;
+    height: 225px;
+    @include center-item;
+    flex-direction: column;
+    margin-top: 97px;
+}
+.feedback-text-left {
+    font-weight: 400;
+    padding-top: 30px;
+    font-size: 20px;
+    line-height: 24px;
+    text-align: center;
+    color: #222224;
+}
+.feedback-right {
+    width: 557px;
+    height: 142px;
+    margin-top: 150px;
+    align-items: center;
+    
+}
+.feedback-head {
+    font-size: 24px;
+    text-align: center;
+    color: #222224;
+}
+.feedback-text-right {
+    font-size: 18px;
+    font-weight: 700;
+    text-align: center;
+    color: #222224;
+    padding-bottom: 32px;
+    line-height: 30px;
+}
+.feedback-subscribe {
+    display: flex;
+    justify-content: center;
+    width: 356px;
+    max-height: 49px;
+    margin-left: 100px;
+
+}
+   
+.subscribe-field {
+    border: none;
+    background: #E1E1E1;
+    padding: 20px;
+    border-top-left-radius: 20px;
+    border-bottom-left-radius: 20px;
+    outline: none;
+    &:hover {
+        background-color: rgb(197, 194, 194);
+        outline: none;
+    }
+}
+.subscribe-btn {
+    font-size: 14px;
+    line-height: 17px;
+    box-sizing: border-box;
+    border: none;
+    background-color: $main-pink;
+    color: #fff;
+    padding: 20px;
+    border-top-right-radius: 20px;
+    border-bottom-right-radius: 20px;
+    cursor: pointer;
+    @include center-item;
+    flex-direction: column;
+    &:hover {
+        color: white;
+        background-color: #f75369;
+        ;
+    }
+}
+
+// ================= TABLET =================
+
+@media (max-width: 780px) {
+	.advantages-wrap {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        padding-bottom: 64px;
+    }
+    .advantages-content {
+        margin-top: 48px;
+        margin-bottom: 0;
+    }
+
+    .feedback {
+        min-height: 693px;
+        @include center-item;
+        flex-direction: column;
+        text-align: center;
+    }
+    .feedback-left {
+        margin-top: 64px;
+    }
+    .feedback-right {
+        margin-top: 48px;
+        margin-bottom: 140px;
+    }
+
+}
+// ================ MOBILE ==================
+
+@media (max-width: 385px) {
+    .feedback-subscribe {
+        margin: 0 auto;
+    }
+    .feedback-head {
+        text-align: center;
+    } 
+    .feedback-right {
+        max-width: 365px;
+    }
+    .feedback-text-right {
+        font-size: 14px;
+    }
+    .feedback-subscribe {
+        max-width: 355px;
+        margin: auto;
+    }
+}

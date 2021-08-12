@@ -1,0 +1,38 @@
+/* БЛОК ПЕРЕМЕННЫХ */
+@import "_var.scss";
+
+/* БЛОК ПРИМЕСЕЙ */
+@import "_mixins.scss";
+
+/* БАЗА */
+@import "_main.scss";
+
+/*ШАПКА*/
+@import "blocks/header";
+
+/* ЗАГОЛОВОК */
+@import "blocks/title";
+
+/* КАТЕГОРИИ */
+@import "blocks/categories";
+
+/* ПРОДУКТ */
+@import "blocks/product";
+
+/* ПРЕИМУЩЕСТВА /// ОБРАТНАЯ СВЯЗЬ */
+@import "blocks/advantages-feedback";
+
+/* ПОДВАЛ */
+@import "blocks/footer";
+
+/* ===============СТРАНИЦА КАТАЛОГА =============== */
+@import "blocks/catalog_page";
+
+/* ===============СТРАНИЦА ПРОДУКТА =============== */ 
+@import "blocks/product_page";
+
+/* ===============СТРАНИЦА ОПЛАТЫ =============== */
+@import "blocks/cart_page";
+
+/* ===============СТРАНИЦА АККАУНТА (ЛОГИН) =============== */
+@import "blocks/login_page";
