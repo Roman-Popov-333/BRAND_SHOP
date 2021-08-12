@@ -1,0 +1,142 @@
+.product {
+    min-height: 1395px;
+}
+.products-wrap {
+    @include center-item;
+    flex-direction: column;
+}
+.product-title {
+    text-align: center;
+    font-size: 30px;
+    line-height: 36px;
+    color: #222222;
+    margin-bottom: 7px;
+}
+.product-text {
+    text-align: center;
+    font-size: 14px;
+    line-height: 17px;
+    color: #9F9F9F;
+    font-weight: 400;
+    margin-bottom: 48px;
+}
+.products-list {   /* ====== Хорошее создание карточки товара!  ==== */
+    list-style: none;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+.products-item {
+    background-color: #F8F8F8;
+    width: 360px;
+    height: 581px;
+    margin-bottom: 30px;
+    overflow: hidden;
+    position: relative;
+    transition: 0.5s;
+    &:hover {                /* ====    показ кнопки ==== */
+        box-shadow: 0px 5px 8px 0px rgba(0, 0, 0, 0.15);
+    }
+}
+.overlay {
+    position: absolute;
+    top: 0;
+    left: -360px;    // == делается для анимации ==
+    right: 0;
+    width: 360px;
+    height: 420px;
+    background-color: rgba(58, 56, 56, 0.83);
+    @include center-item;
+    flex-direction: column;
+    opacity: 0;
+    transition: 1.5s;    
+}
+.products-item:hover .overlay {
+    opacity: 1;
+    left: 0; // == делается для анимации ==
+}
+.buy-btn {
+    font-size: 14px;
+    line-height: 17px;
+    font-weight: 400;
+    color: #FFFFFF;
+    border: 1px solid #FFFFFF;
+    padding: 14px 16px;
+    background-color: rgba(58, 56, 56, 0.4);
+    @include center-item;
+    text-align: center;
+}
+.buy-btn::before {
+    content: url(../img/basket_white.svg);
+    margin-right: 11px;
+}
+
+.product-name {
+    font-style: normal;  
+    font-weight: 400;
+    font-size: 13px;
+    line-height: 16px;
+    color: #000000;
+    margin: 24px 18px 13px;
+}
+.product-desc {
+    font-size: 14px;
+    line-height: 17px;
+    color: #5D5D5D;
+    margin: 0 18px 18px 18px;
+}
+.product-price {
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 19px;
+    color: $main-pink;
+    margin: 0 18px;
+}
+
+.product-button {
+    margin: 48px auto 95px;
+    padding: 15px 39px;
+    font-weight: 400;
+    text-decoration: none;
+    font-size: 16px;
+    color: #F26376;
+    border: 1px solid #F26376;
+    box-sizing: border-box;
+    cursor: pointer;
+    transition: width 2s, height 2s, background-color 2s, transform 2s;
+    &:hover {
+        color: white;
+        background-color: #F26376;
+        border-radius: 20px;
+        transform: rotate(360deg);
+    }
+}
+
+
+// ================= TABLET =================
+
+@media (max-width: 780px) {
+	.products-text {
+        margin-bottom: 74px;
+    }
+    .products-list {
+        list-style: none;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-around;
+    }
+    .product-button {
+        margin: 32px auto 64px;
+    }
+}   
+// ================ MOBILE ==================
+
+@media (max-width: 385px) {
+    .products-text {
+        margin-bottom: 64px;
+    }
+    .product-button {
+        margin: 40px auto 96px;
+    }
+    
+}

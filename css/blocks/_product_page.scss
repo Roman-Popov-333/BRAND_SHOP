@@ -1,0 +1,208 @@
+.product-page {
+    min-height: 777px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: #F7F7F7;
+}
+.prod-but {
+    fill: black;
+    @include center-item;
+    width: 47px;
+    height: 47px;
+    filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
+    border: none;
+    background-color: #a5a3a3;
+    &:hover {
+        fill: $main-pink;
+        background-color: #dbd9d9;
+    }
+}
+.icon-product img {
+    overflow:hidden;
+    transition: all 1s ease-out;
+    -o-transition: all 1s ease-out;
+    -webkit-transition: all 1s ease-out;
+    }  
+.icon-product img:hover{
+    transform: scale(1.1);
+    -moz-transform: scale(1.1);
+    -o-transform: scale(1.1);
+    
+}
+.slider {    
+    background-color: white;
+    border: 1px solid #EAEAEA;
+    margin-top: -64px;
+    max-width: 1140px;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    min-height: 601px;
+    list-style-type: none;
+    margin-bottom: 128px;    //   ==== тест градиента ==
+    background: linear-gradient(-39deg, #f1dfd8, #f5a0bf, #c5a9a9, #f8a9f5);
+	background-size: 400% 400%;
+	animation: gradient 4s ease infinite;
+}
+@keyframes gradient {
+	0% {
+		background-position: 0% 50%;
+	}
+	50% {
+		background-position: 100% 50%;
+	}
+	100% {
+		background-position: 0% 50%;
+}           //   ==== тест градиента ==
+}
+
+.about-wrap { 
+    list-style-type: none;
+}    
+.slider-head {
+    margin-top: 64px;
+    margin-bottom: 12px;
+    font-size: 14px;
+    line-height: 17px;
+    color: $main-pink;
+}
+.slider-line {
+    margin-bottom: 12px;
+}
+.slider-name {
+    font-size: 18px;
+    line-height: 22px;
+    color: #4D4D4D;
+    margin-bottom: 48px;
+}
+.slider-text {
+    max-width: 555px;
+    font-size: 14px;
+    line-height: 17px;
+    text-align: center;
+    color: #5E5E5E;
+    margin-bottom: 32px;
+}
+.slider-price {
+    font-size: 24px;
+    line-height: 29px;
+    color: #EF5B70;
+    margin-bottom: 65px;
+}
+.product-select-wrap {
+    margin-top: 65px;
+    @include center-item;
+    text-decoration: none;
+    margin-bottom: 48px;
+}
+.add-button {
+    margin-bottom: 65px;
+    @include center-item;
+}
+.add-to-card-button {
+    padding: 15px 39px;
+    font-weight: 400;
+    text-decoration: none;
+    font-size: 16px;
+    color: #F26376;
+    border: 1px solid #F26376;
+    box-sizing: border-box;
+    display: flex;
+    align-items: center;
+    text-align: center;
+    cursor: pointer;
+    transition: 0.5s;
+    &:hover {
+        color: white;
+        background-color: #F26376;
+        border-radius: 20px;
+    }
+}
+.add-to-card-button::before {
+    content: url(../img/basket-pink.svg);
+    margin-right: 23px;
+    transition: 1.5s;
+    cursor: pointer;
+}
+.add-to-card-button:hover:before {
+    content: url(../img/basket_white.svg);
+    margin-right: 23px;
+    
+}
+.product-basket {
+    fill: #EF5B70;
+}
+.product-card {
+    min-height: 709px;
+}
+
+// ================= TABLET =================
+
+@media (max-width: 780px) {
+
+    .product-page {
+        min-height: 624px;
+    }
+    .icon-product-img {
+        width: 466px;
+        height: 565px;
+    }
+    .slider {
+        margin-top: 0;
+    }
+    
+    .inv-prod {
+        display: none;
+    }
+    .prod-inv {
+        display: block;
+    }
+    .products-item:nth-child(1) {
+        order: 2;
+    }
+}
+// ================ MOBILE ==================
+
+@media (max-width: 385px) {
+    .product-page {
+        max-height: 624px;
+        max-width: 375px;
+    }
+    .icon-product-img {
+        width: 374px;
+        height: 454px;
+        z-index: 1;
+    }
+    .prod-but-left {
+        position: absolute;
+        margin-left: 0;
+        z-index: 3;
+    }
+    .prod-but-right {
+        position: absolute;
+        right: 0;
+        margin-right: 0;
+        z-index: 3;
+    }
+    .slider {
+        max-width: 375px;
+        margin-top: 0;
+    }
+    .slider-line-price {
+        width: 175px;
+    }
+    .inv-prod {
+        display: block;
+    }
+    .prod-inv {
+        display: none;
+    }
+    .products-item:nth-child(3) {
+        order: 2;
+    }
+    .slider {
+        margin-bottom: 64px;
+    }
+}

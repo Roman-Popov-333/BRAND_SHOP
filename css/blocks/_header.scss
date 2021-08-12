@@ -1,0 +1,154 @@
+.header {
+    background-color: #222;
+    min-height: 75px;
+}
+.header-wrap {
+    display: flex;
+    justify-content: space-between;
+    padding: 19px 0;
+}
+.header-logo {
+    margin-right: 41px;
+}
+.header-search {
+    fill: #E8E8E8; 
+    &:hover {
+        fill: $main-pink;
+    }
+}
+.header-right {
+    position: relative;
+}
+.header-menu {
+    fill: #E8E8E8;
+    &:hover {
+        fill: $main-pink;
+    }
+}
+.nav {
+    background: #FFFFFF;
+    box-shadow: 6px 4px 35px rgba(0, 0, 0, 0.21);
+    width: 232px;
+    min-height: 764px;
+    margin-top: 20px;
+    padding: 37px 34px;
+    position: fixed;
+    top: 67px;
+    right: 0;
+    transform: scalex(0);
+    transform-origin: right top;
+    transition: 0.5s;
+    z-index: 100; //  важно!! Покажет поверх любых окон
+  }
+.nav-title {
+    font-style: normal;
+    font-weight: bold;
+    font-size: 14px;
+    line-height: 17px;
+    color: #000000;
+    margin-bottom: 4px;
+}
+.nav-title-list {
+    margin-top: 20px;
+}
+.nav-heading {
+    font-style: normal;
+    font-weight: normal;
+    font-size: 14px;
+    line-height: 17px;
+    color: $main-pink;
+}
+.nav-list {
+    list-style-type: none;
+}
+.nav-item {
+    margin-left: 21px;
+    padding-top: 11px;
+}
+.nav-link {
+    font-style: normal;
+    font-weight: normal;
+    font-size: 14px;
+    line-height: 17px;
+    color: #6F6E6E;
+    text-decoration: none;
+}
+.nav-link:hover {
+    border-bottom: 1px solid $main-pink;
+}
+.btn {
+    margin-bottom: 9px;
+    background-color: #333;
+    color: #fff;
+    display: inline-block;
+}
+#toggle {
+    display: none;
+}
+#toggle:checked ~ .nav {
+    transform: scalex(1);
+}
+.nav-title {
+    margin-top: 0;
+}
+.nav-overlay {
+    position: relative;
+    margin-right: auto;
+}
+.btn-close {
+    position: absolute;
+    right: -10px;
+    top: -10px;
+    background-color: #fff;
+}
+.btn-close:hover {
+    fill: #EF5B70;
+}
+.header-account {
+    margin-left: 33px;
+    fill: #E8E8E8;
+    &:hover {
+        margin-left: 33px;
+        fill: $main-pink;
+    }
+}
+.header-cart {
+    margin-left: 33px;
+    fill: #E8E8E8;
+    &:hover {
+        margin-left: 33px;
+        fill: $main-pink;
+    }
+}
+
+// ================= TABLET =================
+
+@media (max-width: 780px) {
+	.header-wrap {
+        padding: 18px 32px;
+    }
+    .nav {
+        top: 65px; 
+    }
+}
+// ================ MOBILE ==================
+
+@media (max-width: 385px) {
+    .header-wrap {
+        padding: 18px 16px;
+    }
+    .header-cart {
+        display: none;
+    }
+    .header-account {
+        display: none;
+    }
+    .nav {
+        top: 57px; 
+    }
+    .btn {
+        margin-top: 9px;
+        width: 32px;
+        height: 23px;
+    }
+}
